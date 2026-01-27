@@ -231,7 +231,7 @@
             useEffect(() => {
                 loadHistory();
                 // Load unanswered queries count for the badge
-                fetch('http://localhost:3000/api/unanswered')
+                fetch(`${API_BASE_URL}/api/unanswered`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.success) {
@@ -246,7 +246,7 @@
              */
             const loadHistory = async () => {
                 try {
-                    const response = await fetch(`http://localhost:3000/api/history/${sessionId}`);
+                    const response = await fetch(`${API_BASE_URL}/api/history/${sessionId}`);
                     const data = await response.json();
 
                     if (data.success && data.history.length > 0) {
@@ -290,7 +290,7 @@
              */
             const loadAllHistory = async () => {
                 try {
-                    const response = await fetch('http://localhost:3000/api/history');
+                    const response = await fetch(`${API_BASE_URL}/api/history`);
                     const data = await response.json();
 
                     if (data.success && data.history.length > 0) {
@@ -337,7 +337,7 @@
 
                 try {
                     // Send message to API
-                    const response = await fetch('http://localhost:3000/api/chat', {
+                    const response = await fetch(`${API_BASE_URL}/api/chat`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ message: userMessage, sessionId })
@@ -383,7 +383,7 @@
              */
             const handleFeedback = async (messageId, feedbackType, userQuestion, botResponse) => {
                 try {
-                    const response = await fetch('http://localhost:3000/api/feedback', {
+                    const response = await fetch(`${API_BASE_URL}/api/feedback`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -443,7 +443,7 @@
                 if (confirm('Are you sure you want to clear the chat?')) {
                     try {
                         // Call clear API endpoint
-                        await fetch('http://localhost:3000/api/clear', {
+                        await fetch(`${API_BASE_URL}/api/clear`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ sessionId })
