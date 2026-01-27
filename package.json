@@ -1,0 +1,35 @@
+{
+  "name": "gemini-chatbot",
+  "version": "1.0.0",
+  "description": "Gemini AI Chatbot",
+  "main": "chatbot.js",
+  "scripts": {
+    "start": "node chatbot.js",
+    "stream": "node chatbot-stream.js",
+    "advanced": "node chatbot-advanced.js",
+    "server": "node server.js",
+    "ser": "node server.js"
+  },
+  "keywords": [
+    "gemini",
+    "ai",
+    "chatbot"
+  ],
+  "author": "JustusFaby",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "framer-motion": "^12.23.22",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.19.1",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.14"
+  }
+}
