@@ -4,6 +4,14 @@ An intelligent FAQ chatbot powered by Groq's lightning-fast LLaMA 3.3 70B model.
 
 ---
 
+## 🌐 Live Demo
+
+**Try it now:** [https://faq-chatbot-groqapi.onrender.com/react-chat.html](https://faq-chatbot-groqapi.onrender.com/react-chat.html)
+
+Experience the chatbot in action! The app is deployed on Render and ready to use.
+
+---
+
 ## ✨ Features
 
 ### 🚀 AI & Performance
