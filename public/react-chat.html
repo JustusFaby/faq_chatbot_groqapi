@@ -78,6 +78,11 @@
         // Import React hooks
         const { useState, useEffect, useRef } = React;
 
+        // Define the API base URL based on environment
+        const API_BASE_URL = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000' 
+            : window.location.origin;
+
         /**
          * Message Component
          * Displays individual chat messages with user/bot styling
